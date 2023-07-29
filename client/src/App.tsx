@@ -1,18 +1,24 @@
 import React from "react";
-import { readonlyprops } from "types/readonlyprops";
 
-type proto = {
-  id: number;
-  name: string;
-  isCool: boolean;
+type dessert =
+  | { kind: "Cookie"; type: "Chocolate" | "Raisins" }
+  | {
+      kind: "Ice-cream";
+      flavor: "Chocolate" | "Vanilla";
+      topping: "Gummy-bears" | "Chocolate-chips";
+    };
+
+let a: dessert = {
+  kind: "Cookie",
+  type: "Chocolate",
+};
+let b: dessert = {
+  kind: "Ice-cream",
+  flavor: "Chocolate",
+  topping: "Gummy-bears",
 };
 
-type readOnlyComponentProps = readonlyprops<proto>;
-
 function App() {
-  function coolCoponent(props: readOnlyComponentProps) {
-    return <>{props.id}</>;
-  }
   return <div>App</div>;
 }
 
