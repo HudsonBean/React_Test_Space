@@ -9,12 +9,12 @@ enum toppings {
 type Props =
   | {
       kind: "Cookie";
-      toppings: toppings.ChocolateChip | toppings.Raisins | toppings.Nuts;
+      toppings: toppings;
     }
   | {
       kind: "Ice-Cream";
       flavor: "Chocolate" | "Vanilla";
-      toppings: toppings.ChocolateChip | toppings.Raisins | toppings.Nuts;
+      toppings: toppings;
     };
 
 const Dessert: React.FC<Props> = ({ kind, toppings }) => {
