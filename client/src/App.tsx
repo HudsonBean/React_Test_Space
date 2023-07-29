@@ -17,6 +17,9 @@ let b: dessert = {
   flavor: "Chocolate",
   topping: "Gummy-bears",
 };
+let c: Omit<dessert, "type"> = {
+  kind: "Cookie",
+};
 
 function App() {
   return <div>App</div>;
