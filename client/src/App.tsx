@@ -1,15 +1,13 @@
-import React from "react";
+import React, { ReactPropTypes } from "react";
 import "./styles/App.css";
-import { Person } from "./components/Person";
+import { BEM } from "./components/BEM";
+import { CoolButton } from "./components/CoolButton";
 
 const App = () => {
   return (
     <>
-      <Person firstName="John" />
-      {/* Example of bem */}
-      <div className="test test--dark">
-        <div className="test__prototype">Hello</div>
-      </div>
+      <BEM />
+      <CoolButton text="Click me!" message="Fuuny!" colors={["red", "blue"]} />
     </>
   );
 };
