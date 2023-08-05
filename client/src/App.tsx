@@ -1,6 +1,11 @@
 import React from "react";
 import "./App.css";
+import { Counter } from "./features/components/Counter";
 
 export const App = () => {
-  return <div>App</div>;
+  return (
+    <>
+      <Counter />
+    </>
+  );
 };
