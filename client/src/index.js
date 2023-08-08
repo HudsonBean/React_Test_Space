@@ -2,11 +2,19 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { App } from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { Provider } from "react-redux";
+import { ApiProvider } from "@reduxjs/toolkit/dist/query/react";
+import { store } from "./store";
+import { productsApi } from "./features/slices/apiSlice";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <ApiProvider api={productsApi}>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </ApiProvider>
   </React.StrictMode>
 );
 
