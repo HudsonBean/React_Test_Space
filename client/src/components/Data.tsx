@@ -6,8 +6,13 @@ export const Data = () => {
   console.log(data, error, isLoading);
   return (
     <div>
-      {data?.products.map((i) => (
-        <p key={i.id}>{i.title}</p>
+      {data?.products.map((product) => (
+        <>
+          <p key={product.id}>{product.title}</p>
+          {product.images.map((image) => (
+            <img key={product.id} src={image}></img>
+          ))}
+        </>
       ))}
     </div>
   );
