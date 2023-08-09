@@ -8,10 +8,8 @@ export const Data = () => {
     <div>
       {data?.products.map((product) => (
         <>
-          <p key={product.id}>{product.title}</p>
-          {product.images.map((image) => (
-            <img key={product.id} src={image}></img>
-          ))}
+          <li key={product.id}>{product.title}</li>
+          <img src={product.images[0]}></img>
         </>
       ))}
     </div>
