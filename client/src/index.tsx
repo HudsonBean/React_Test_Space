@@ -2,18 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
-import { ApiProvider } from "@reduxjs/toolkit/query/react";
+import { store } from "./store";
+import { Data } from "./components/Data";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <ApiProvider api={}>
-      <Provider store={}>
-        <h1>App</h1>
-      </Provider>
-    </ApiProvider>
+    <Provider store={store}>
+      <Data />
+    </Provider>
   </React.StrictMode>
 );
 
