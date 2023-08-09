@@ -7,10 +7,10 @@ export const Data = () => {
   return (
     <div>
       {data?.products.map((product) => (
-        <>
-          <li key={product.id}>{product.title}</li>
+        <ul key={product.id}>
+          <li>{product.title}</li>
           <img src={product.images[0]}></img>
-        </>
+        </ul>
       ))}
     </div>
   );
