@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles/Home.css";
 import { useGetAllUsersQuery, useGetUserQuery } from "../features/apiSlice";
 
 export const Home = () => {
